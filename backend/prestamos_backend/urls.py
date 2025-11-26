@@ -4,14 +4,14 @@ from rest_framework.routers import DefaultRouter
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 from usuarios.views import UserViewSet, PerfilEstudianteViewSet
-from prestamos.views import PrestamoViewSet, PagoViewSet
+from prestamos.views import PrestamoViewSet   # 👈 QUITAMOS PagoViewSet
 from notificaciones.views import NotificacionViewSet
 
 router = DefaultRouter()
 router.register(r'usuarios', UserViewSet)
 router.register(r'perfiles', PerfilEstudianteViewSet)
-router.register(r'prestamos', PrestamoViewSet)
-router.register(r'pagos', PagoViewSet)
+router.register(r'prestamos', PrestamoViewSet)          # ✔ OK
+# router.register(r'pagos', PagoViewSet)               # ❌ QUITADO
 router.register(r'notificaciones', NotificacionViewSet)
 
 urlpatterns = [

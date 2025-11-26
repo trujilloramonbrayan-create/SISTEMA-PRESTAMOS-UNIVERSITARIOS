@@ -70,12 +70,12 @@ WSGI_APPLICATION = 'prestamos_backend.wsgi.application'
 # Database - MySQL
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'prestamos_universitarios_db',
-        'USER': 'root',
-        'PASSWORD': 'root123',  
+        'USER': 'postgres',
+        'PASSWORD': 'postgres123',
         'HOST': 'localhost',
-        'PORT': '3306',
+        'PORT': '5433',
     }
 }
 
@@ -119,3 +119,4 @@ SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(hours=5),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
 }
+ 
